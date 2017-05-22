@@ -10,3 +10,5 @@ function team(name, players, status) {
     this.players = players;
     this.alive = status;
 }
+
+
