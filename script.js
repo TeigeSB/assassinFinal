@@ -4,5 +4,6 @@ function Player(captain, kill, dead) {
     this.dead = dead;
 }
 
+function Team() {
 
-function Team()
+}
