@@ -4,6 +4,12 @@ function game(name, teams, players) {
     this.players = players;
 }
 
+function Player(captain, kill, dead) {
+    this.captain = captain;
+    this.kill = kill;
+    this.dead = dead;
+}
+
 
 function team(name, players, status) {
     this.teamName = name;

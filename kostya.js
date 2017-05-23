@@ -5,5 +5,5 @@ function Player(captain, kill, dead) {
 }
 
 function Team() {
-
+    
 }
