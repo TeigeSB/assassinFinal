@@ -18,3 +18,7 @@ function Team(name, players, status) {
 }
 
 
+function Rules(select) {
+    this.select = select;
+}
+
