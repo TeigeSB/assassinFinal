@@ -62,3 +62,4 @@ function reassignTeam() {
     //if no more teams are left to assign then they won the game
 }
 
+ //kostya is a stupid piece of shit who should go kill himself in some shitty Denny's bathroom. :)
