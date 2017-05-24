@@ -23,6 +23,22 @@ function Player(name, captain, id, kills, status) {
 }
 
 
+//this will save an array of objects to a local storage
+function download(array, name) {
+    var json = JSON.stringify(array);
+    localStorage.setItem(name, json);
+}
+
+//this retrieves data from local storage
+function reload(name) {
+    var text = localStorage.getItem(name);
+    var obj = JSON.parse(text);
+    return obj;
+}
+
+
+
+
 
 function startGame() {
     //assign every team a target of a different team
