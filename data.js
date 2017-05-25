@@ -1,26 +1,28 @@
 function Game(name, teams, players) {
-    this.name = name;
+    this.gameName = name;
     this.teams = teams;
     this.players = players;
 }
 
-function Player(captain, kill, dead) {
-    this.captain = captain;
-    this.kill = kill;
-    this.dead = dead;
-}
-
-
-function Team(name, players, status) {
+function Team(name, players, target, status) {
     this.teamName = name;
     this.players = players;
+    this.target = target;
     this.alive = status;
 }
 
-
-function Rules(select) {
-    this.select = select;
+function Player(name, id, captain, kill, status) {
+    this.playerName = name;
+    this.id = id;
+    this.captain = captain;
+    this.kill = kill;
+    this.status = status;
 }
+
+function Rules() {
+    //print out rules
+}
+
 
 
 
@@ -36,6 +38,14 @@ function getData(name) {
     var obj = JSON.parse(text);
     return obj;
 }
+
+
+var player1 = new Player();
+
+
+
+
+
 
 
 
