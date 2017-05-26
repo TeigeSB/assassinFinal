@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="data.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="teige.js"></script>
     <script src="ben.js"></script>
     <script src="thomas.js"></script>
     <script src="kostya.js"></script>
     <script src="lorenzo.js"></script>
-    <script src="kostya.js"></script>
     <script src="sam.js"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body>
+<body onload="onLoad()">
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h1>Page 1</h1>
+    </div>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <div>
+            <div role="textbox" id="username" class="ui-btn ui-corner-all ui-btn-inline">
+            <label for="clear-demo">Username:</label>
+            <input type="text" name="clear" id="clear-demo" value="" data-clear-btn="true">
+        </div>
+            <div role="textbox" id="password" class="ui-btn ui-corner-all ui-btn-inline">
+                <label for="password1">Password:</label>
+                <input type="password" name="clear" id="password1" value="" data-clear-btn="true">
+            </div>
+        </div>
+    </div>
 
-<button onclick="startGame()">Start Game</button>
 
+    <div id="page2go" role="main" class="ui-content">
+        <a href="#page2" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Login</a>
+    </div>
+</div>
+<div data-role="page" id="page2">
+    <div data-role="header">
+        <h1>Page 2</h1>
+    </div>
+    <div role="main" class="ui-content">
+        <a href="#page1" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+    </div>
+</div>
 </body>
 </html>
