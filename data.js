@@ -1,6 +1,37 @@
-/**
- * Created by h205p3 on 5/25/17.
- */
+function Game(name, teams, players) {
+    this.gameName = name;
+    this.teams = teams;
+    this.players = players;
+}
+
+function Team(name, players, target, status) {
+    this.teamName = name;
+    this.players = players;
+    this.target = target;
+
+    //true = alive
+    this.alive = status;
+}
+
+function Player(name, id, captain, kills, status) {
+    this.playerName = name;
+    this.id = id;
+
+    //true = team captain
+    this.captain = captain;
+    this.kills = kills;
+
+    //true = alive
+    this.status = status;
+}
+
+function Rules() {
+    //print out rules
+}
+
+
+
+
 //this will save an array of objects to a local storage
 function setData(array, name) {
     var json = JSON.stringify(array);
@@ -15,26 +46,22 @@ function getData(name) {
 }
 
 
+
+
 function startGame() {
-    //make data
-    var player1 = {name: "Kostya", isAlive: false};
-    var player2 = {name: "Teige", isAlive: true};
-
-    var players = [player1, player2];
-
-    setData(players,"data");
-
-}
-
-
-
-function getNextVictim() {
-    var players = getData("data");
-
-    //iterate through players array, find an alive person
-
-    ///change to assigned, etc
-
-    setData(players,"data");
-
+    assassin = new Game("assassin", teams, players);
+    p1 = new Player("player1", 001, true, 0, true);
+    p2 = new Player("player2", 002, false, 0, true);
+    p3 = new Player("player3", 003, false, 0, true);
+    p4 = new Player("player4", 004, true, 0, true);
+    p5 = new Player("player5", 005, false, 0, true);
+    p6 = new Player("player6", 006, false, 0, true);
+    p7 = new Player("player7", 007, true, 0, true);
+    p8 = new Player("player8", 008, false, 0, true);
+    p9 = new Player("player9", 009, false, 0, true);
+    players = [p1, p2, p3, p4, p5, p6, p7, p8, p9];
+    t1 = new Team("team1", players[0, 2], t2, true);
+    t2 = new Team("team2", players[3, 5], t3, true);
+    t3 = new Team("team3", players[6, 8], t1, true);
+    teams = [t1, t2, t3];
 }
