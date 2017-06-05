@@ -1,9 +1,15 @@
 body {
     font-family: 'Corben', Georgia, Times, serif;
     vertical-align: top;
+    white-space: normal
 }
 
 div {
     margin: 10px 0px;
 }
 
+#rulesPage {
+    white-space: normal !important;
+    font-family: 'Corben', Georgia, Times, serif;
+    vertical-align: top;
+}
