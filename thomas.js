@@ -1,4 +1,10 @@
 function kill(player,playerDead) {
-    //change player status to dead
-    //add 1 to the players kill count
+    for(var i = 0; i < players.length; i++) {
+        if(players[i].playerName === player) {
+            players[i].kills += 1;
+        }
+        if(players[i].playerName === playerDead) {
+            players[i].status = false;
+        }
+    }
 }
