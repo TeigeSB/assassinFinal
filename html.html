@@ -3,19 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="data.js"></script>
     <script src="teige.js"></script>
     <script src="ben.js"></script>
     <script src="thomas.js"></script>
     <script src="kostya.js"></script>
     <script src="lorenzo.js"></script>
-    <script src="kostya.js"></script>
     <script src="sam.js"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <h1>Login</h1>
+    </div>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <div>
+            <div role="textbox" id="username" class="ui-btn ui-corner-all ui-btn-inline">
+                <label for="clear-demo">Username:</label>
+                <input type="text" name="clear" id="clear-demo" value="" data-clear-btn="true">
+            </div>
+            <div role="textbox" id="password" class="ui-btn ui-corner-all ui-btn-inline">
+                <label for="password1">Password:</label>
+                <input type="password" name="clear" id="password1" value="" data-clear-btn="true">
+            </div>
+        </div>
+    </div>
 
-<button onclick="startGame()">Start Game</button>
 
+    <div id="page2go" role="main" class="ui-content">
+        <a href="#page2" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Login</a>
+    </div>
+</div>
+<div data-role="page" id="page2">
+    <div data-role="header">
+        <h1>Main Menu</h1>
+    </div>
+    <div id="team">
+        <div id="teamPage2" role="main" class="ui-content">
+            <a href="#teamPage" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Team</a>
+        </div>
+    </div>
+    <div id="rules">
+        <div id="rules1" role="main" class="ui-content">
+            <a href="#rulesPage" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Rules</a>
+        </div>
+    </div>
+    <div id="submitKill">
+        <div id="submitKill1" role="main" class="ui-content">
+            <a href="#submitKillPage" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Submit Your Kill</a>
+        </div>
+    </div>
+    <div role="main" class="ui-content">
+        <a href="#page1" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Log Out</a>
+    </div>
+</div>
+
+
+<div data-role="page" id="teamPage">
+    <div data-role="header">
+        <h1>Team Page</h1>
+    </div>
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <div>
+            <div role="textbox" id="teamName" class="ui-btn ui-corner-all ui-btn-inline">
+                <label for="clear-demo">Team Name:</label>
+                <input type="text" name="clear" id="teamNam" value="" data-clear-btn="true">
+            </div>
+            <div role="textbox" id="teamPin" class="ui-btn ui-corner-all ui-btn-inline">
+                <label for="password1">Team Pin:</label>
+                <input type="text" name="clear" id="teamPi" value="" data-clear-btn="true">
+            </div>
+            <div role="textbox" id="captainChoice" class="ui-btn ui-corner-all ui-btn-inline">
+                <label for="password1">Captain Choice:</label>
+                <input type="text" name="clear" id="captainChoi" value="" data-clear-btn="true">
+            </div>
+        </div>
+    </div>
+
+    <div role="main" class="ui-content">
+        <a href="#page1" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Main</a>
+    </div>
+</div>
+
+
+
+<div data-role="page" id="submitKillPage">
+    <div data-role="header">
+        <h1>Submit Your Kill</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <a href="#page1" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Go Back Main</a>
+    </div>
+</div>
+
+
+
+<div data-role="page" id="rulesPage">
+    <div data-role="header">
+        <h1>Rules</h1>
+    </div>
+    <ol data-role="listview">
+        <li>Ways to kill : Water, Time bomb, Poison</li>
+        <li>Water play is only permitted of campus. To do this you can wet the back of the neck using anything. If the target is wearing a hoodie etc then it does not count. A water balloon has to hit the body directly. The target must be clearly wet.</li>
+        <li>Time bombs are allowed at any location. Some sort of timer that makes a sound loud enough for the target to hear must be attached to the target or something connected to the target such as a desk,chair,table in some way. The Attacker must not be in the room or at least 30 feet away from the target when the bomb goes off.
+        </li>
+        <li>To successfully poison you target, salt must be added to any liquid that they are drinking. They must put the liquid in their mouth, they do not have to consume the liquid to be dead. </li>
+        <li>
+            You can protect yourself by using spraying or hitting your attacker with water. Your you successfully hit them with water off campus they are stunned(Unable to make a kill) until midnight of that day. Stun only works with water.</li>
+        <li>Safe zones are on campus, field trips, sports practices, and jobs/work places. No water play in these locations.</li>
+        <li>No trespassing horseplay etc.</li>
+        <li>You win when your team is the last one standing.</li>
+        <li>Each team has a captain. If your captain dies your team is out. If one of the non captain players dies they are out until the next round. You will be assigned a new team each round and given a time period to complete the task(Kill a player) to advance to the next round. </li>
+    </ol>
+    <div role="main" class="ui-content">
+        <a href="#rulesPag" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Main</a>
+    </div>
+</div>
 </body>
 </html>
