@@ -1,4 +1,20 @@
-function reassignTeam() {
-    //once team is dead, assign team who killed them their new team
-    //if no more teams are left to assign then they won the game
-}
+// function reassignTeam(myTeam){
+//
+//
+//
+//     if( myTeam.target.status = false);
+//
+//
+//
+//     var otherTeamTarget = myTeam.target.target;
+//     myTeam.target = otherTeamTarget;
+//     for (x = 0; x < myTeam.players.length; x++){
+//         for(j = 0; j < myTeam.target.players.length){
+//             if myTeam.target.players[j].alive{
+//             }
+//             else{
+//                 j++;
+//             }
+//         };
+//     };
+// };

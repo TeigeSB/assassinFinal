@@ -1,10 +1,10 @@
-function eliminateTeam() {
-    //once player dies see if whole team is dead
-    //if whole team or team captain is dead change team status to dead
-
+function killTeam (team) {
+    if (team.captain.status == false) {
+        team.status = false
+    }
+    console.log(players);
+    console.log(teams);
 }
-
-
-
+killTeam(t1);
 
 
