@@ -33,8 +33,8 @@ function Rules() {
 
 
 //this will save an array of objects to a local storage
-function setData(array, name) {
-    var json = JSON.stringify(array);
+function setData(dataToSet, name) {
+    var json = JSON.stringify(dataToSet);
     localStorage.setItem(name, json);
 }
 

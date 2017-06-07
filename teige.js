@@ -2,28 +2,33 @@
  * Created by h205p3 on 5/22/17.
  */
 
-userNames = [];
-passWords = [];
+userNames = ["user"];
+passWords = ["pw"];
 
 function saveLogin () {
-    var user = getData(userNames);
+
+    var user = getData('hey');
     var pass = getData(passWords);
+    console.log(user);
     var inputPass= $("#clear-demo").val();
     var inputName = $("#password1").val();
 
-    setData(userNames, 'hey');
+
 
     for (var i = 0; i < user.length; i++) {
-        if (inputPass !== user[i]) {
+        if (inputPass !== getData(inputPass) && inputName !== getData(inputName)) {
             setData(userNames, inputPass);
+            setData(passWords, inputName);
             console.log(inputPass);
-        } else if (inputPass == user[i] && inputName == pass[i]) {
+        } else if (inputPass !== getData(inputPass)) {
+            prompt('Your Username is incorrect!')
+        }
+            else if (inputPass == getData(inputPass) && inputName == getData(inputName)) {
             console.log("HI")
         } else {
             console.log('NOT WORKING')
         }
     }
-    console.log('hey');
     console.log(user);
     console.log(pass)
 }
