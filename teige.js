@@ -5,31 +5,26 @@
 userNames = [];
 passWords = [];
 
-$("#login").click(function() {
-    for (var i = 0; i < userNames.length; i++) {
-        if ($("#clear-demo") !== userNames[i]) {
-            setData(userNames, $("#clear-demo"));
-            console.log($("#clear-demo"));
-        } else if ($("#username") == userNames[i] && $("#password") == passWords[i]) {
-
-        }
-
-    }
-});
-
-
 function saveLogin () {
-    for (var i = 0; i < userNames.length; i++) {
-        if ($("#clear-demo") !== userNames[i]) {
-            setData(userNames, $("#clear-demo"));
-            console.log($("#clear-demo"));
-        } else if ($("#username") == userNames[i] && $("#password") == passWords[i]) {
+    var user = getData(userNames);
+    var pass = getData(passWords);
+    var inputPass= $("#clear-demo").val();
+    var inputName = $("#password1").val();
 
+    setData(userNames, 'hey');
+
+    for (var i = 0; i < user.length; i++) {
+        if (inputPass !== user[i]) {
+            setData(userNames, inputPass);
+            console.log(inputPass);
+        } else if (inputPass == user[i] && inputName == pass[i]) {
+            console.log("HI")
         } else {
-            console.log($("#clear-demo"))
+            console.log('NOT WORKING')
         }
     }
-        $( "#clear-demo" ).textinput();
-    console.log($("#clear-demo"))
+    console.log('hey');
+    console.log(user);
+    console.log(pass)
 }
 
