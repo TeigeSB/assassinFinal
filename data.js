@@ -1,34 +1,21 @@
-function Game(name, teams, players) {
+function Game(name) {
     this.gameName = name;
-    this.teams = teams;
-    this.players = players;
 }
 
-function Team(name, players, target, status) {
+function Team(name, players, captain, status) {
     this.teamName = name;
     this.players = players;
-    this.target = target;
-
-    //true = alive
+    this.captain = captain;
     this.alive = status;
 }
 
 function Player(name, id, captain, kills, status) {
     this.playerName = name;
     this.id = id;
-
-    //true = team captain
     this.captain = captain;
     this.kills = kills;
-
-    //true = alive
     this.status = status;
 }
-
-function Rules() {
-    //print out rules
-}
-
 
 
 
@@ -47,21 +34,52 @@ function getData(name) {
 
 
 
-
 function startGame() {
-    assassin = new Game("assassin", teams, players);
-    p1 = new Player("player1", 001, true, 0, true);
-    p2 = new Player("player2", 002, false, 0, true);
-    p3 = new Player("player3", 003, false, 0, true);
-    p4 = new Player("player4", 004, true, 0, true);
-    p5 = new Player("player5", 005, false, 0, true);
-    p6 = new Player("player6", 006, false, 0, true);
-    p7 = new Player("player7", 007, true, 0, true);
-    p8 = new Player("player8", 008, false, 0, true);
-    p9 = new Player("player9", 009, false, 0, true);
-    players = [p1, p2, p3, p4, p5, p6, p7, p8, p9];
-    t1 = new Team("team1", players[0, 2], t2, true);
-    t2 = new Team("team2", players[3, 5], t3, true);
-    t3 = new Team("team3", players[6, 8], t1, true);
-    teams = [t1, t2, t3];
+    console.log("starting game");
+    assassin = new Game("assassin");
+
+    p0 = new Player("player1", 000, true, 0, true);
+    p1 = new Player("player2", 001, false, 0, true);
+    p2 = new Player("player3", 002, false, 0, true);
+    p3 = new Player("player4", 003, true, 0, true);
+    p4 = new Player("player5", 004, false, 0, true);
+    p5 = new Player("player6", 005, false, 0, true);
+    p6 = new Player("player7", 006, true, 0, true);
+    p7 = new Player("player8", 007, false, 0, true);
+    p8 = new Player("player9", 008, false, 0, true);
+
+    players = [p0, p1, p2, p3, p4, p5, p6, p7, p8];
+
+
+    t0 = new Team("team1", players.slice(0,3), p0, true);
+    t1 = new Team("team2", players.slice(3,6), p3, true);
+    t2 = new Team("team3", players.slice(6,9), p6, true);
+
+    t0.target = t1.teamName;
+    t1.target = t2.teamName;
+    t2.target = t0.teamName;
+
+    p0.team = t0;
+    p1.team = t0;
+    p2.team = t0;
+    p3.team = t1;
+    p4.team = t1;
+    p5.team = t1;
+    p6.team = t2;
+    p7.team = t2;
+    p8.team = t2;
+
+
+    teams = [t0, t1, t2];
+
+    assassin.teams = teams;
+    assassin.players = players;
+
+
+
+
+    console.log(assassin);
+    kill("player1", "player4");
+    console.log("    ");
+    console.log(assassin);
 }
