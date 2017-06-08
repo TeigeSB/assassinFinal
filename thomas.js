@@ -1,5 +1,5 @@
 function kill(player,playerDead) {
-    console.log("kill: " + player + " " + playerDead)
+    console.log("kill: " + player + " " + playerDead);
     for(var i = 0; i < players.length; i++) {
         if(players[i].playerName === player) {
 

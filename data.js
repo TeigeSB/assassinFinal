@@ -74,12 +74,4 @@ function startGame() {
 
     assassin.teams = teams;
     assassin.players = players;
-
-
-
-
-    console.log(assassin);
-    kill("player1", "player4");
-    console.log("    ");
-    console.log(assassin);
 }

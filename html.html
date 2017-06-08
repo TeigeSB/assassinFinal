@@ -22,20 +22,20 @@
     </div>
     <div style="display:flex;justify-content:center;align-items:center;">
         <div>
-            <div role="textbox" id="usernameBox" class="ui-btn ui-corner-all ui-btn-inline">
-            <label for="clear-demo" id="username">Username:</label>
-            <input type="text" name="clear" id="clear-demo" value="" >
-        </div>
+            <div role="textbox" id="username" class="ui-btn ui-corner-all ui-btn-inline">
+                <label for="clear-demo">Username:</label>
+                <input type="text" name="clear" id="clear-demo" value="" data-clear-btn="true">
+            </div>
             <div role="textbox" id="password" class="ui-btn ui-corner-all ui-btn-inline">
                 <label for="password1">Password:</label>
-                <input type="password" name="clear" id="password1" value="" >
+                <input type="password" name="clear" id="password1" value="" data-clear-btn="true">
             </div>
         </div>
     </div>
 
 
     <div id="page2go" role="main" class="ui-content">
-        <a id="login" href="#page2" data-transition="pop" onclick="saveLogin()" class="ui-btn ui-corner-all ui-btn-inline">Login</a>
+        <a href="#page2" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Login</a>
     </div>
 </div>
 <div data-role="page" id="page2">
@@ -61,7 +61,6 @@
         <a href="#page1" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Log Out</a>
     </div>
 </div>
-
 
 
 <div data-role="page" id="teamPage">
@@ -108,16 +107,14 @@
     <div data-role="header">
         <h1>Rules</h1>
     </div>
-    <ol data-role="listview" data-inset="true" data-theme="e" id="custom-listview">
+    <ol data-role="listview">
         <li>Ways to kill : Water, Time bomb, Poison</li>
-        <li>Water play is only permitted off campus. To do this you can wet the back of the neck using anything.
-            If the target is wearing a hoodie etc. then it does not count. A water balloon has to hit the body directly. The target must be clearly wet.</li>
-        <li>Time bombs are allowed at any location. Some sort of timer that makes a sound loud enough for the target to hear must be attached to the target or something connected to the target such
-            as a desk, chair, table in some way. The Attacker must not be in the room or at least 30 feet away from the target when the bomb goes off.
+        <li>Water play is only permitted of campus. To do this you can wet the back of the neck using anything. If the target is wearing a hoodie etc then it does not count. A water balloon has to hit the body directly. The target must be clearly wet.</li>
+        <li>Time bombs are allowed at any location. Some sort of timer that makes a sound loud enough for the target to hear must be attached to the target or something connected to the target such as a desk,chair,table in some way. The Attacker must not be in the room or at least 30 feet away from the target when the bomb goes off.
         </li>
         <li>To successfully poison you target, salt must be added to any liquid that they are drinking. They must put the liquid in their mouth, they do not have to consume the liquid to be dead. </li>
         <li>
-            You can protect yourself by using spraying or hitting your attacker with water. Your you successfully hit them with water off campus they are stunned ( Unable to make a kill ) until midnight of that day. Stun only works with water.</li>
+            You can protect yourself by using spraying or hitting your attacker with water. Your you successfully hit them with water off campus they are stunned(Unable to make a kill) until midnight of that day. Stun only works with water.</li>
         <li>Safe zones are on campus, field trips, sports practices, and jobs/work places. No water play in these locations.</li>
         <li>No trespassing horseplay etc.</li>
         <li>You win when your team is the last one standing.</li>
