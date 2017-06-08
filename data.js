@@ -2,9 +2,10 @@ function Game(name) {
     this.gameName = name;
 }
 
-function Team(name, players, captain, status) {
+function Team(name, players, pin, captain, status) {
     this.teamName = name;
     this.players = players;
+    this.pin = pin;
     this.captain = captain;
     this.alive = status;
 }
@@ -51,9 +52,9 @@ function startGame() {
     players = [p0, p1, p2, p3, p4, p5, p6, p7, p8];
 
 
-    t0 = new Team("team1", players.slice(0,3), p0, true);
-    t1 = new Team("team2", players.slice(3,6), p3, true);
-    t2 = new Team("team3", players.slice(6,9), p6, true);
+    t0 = new Team("team1", players.slice(0,3), 001, p0, true);
+    t1 = new Team("team2", players.slice(3,6), 002, p3, true);
+    t2 = new Team("team3", players.slice(6,9), 003, p6, true);
 
     t0.target = t1.teamName;
     t1.target = t2.teamName;
