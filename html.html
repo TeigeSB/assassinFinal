@@ -35,7 +35,7 @@
 
 
     <div id="page2go" role="main" class="ui-content">
-        <a href="#page2" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Login</a>
+        <a href="#page2" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline" onclick="saveLogin()">Login</a>
     </div>
 </div>
 <div data-role="page" id="page2">
@@ -94,6 +94,14 @@
 <div data-role="page" id="submitKillPage">
     <div data-role="header">
         <h1>Submit Your Kill</h1>
+    </div>
+    <div role="textbox" id="whoKill" class="ui-btn ui-corner-all ui-btn-inline">
+        <label for="clear-demo">Who Killed:</label>
+        <input type="text" name="clear" id="whoKilled" value="" data-clear-btn="true">
+    </div>
+    <div role="textbox" id="whoDead" class="ui-btn ui-corner-all ui-btn-inline">
+        <label for="clear-demo">Who Died:</label>
+        <input type="text" name="clear" id="whoDeaded" value="" data-clear-btn="true">
     </div>
 
     <div role="main" class="ui-content">
