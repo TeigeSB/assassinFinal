@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-<div data-role="page" id="page1">
+<div data-role="page" id="page1" onclick="startGame()">
     <div data-role="header">
         <h1>Login</h1>
     </div>
@@ -101,10 +101,10 @@
     </div>
     <div role="textbox" id="whoDead" class="ui-btn ui-corner-all ui-btn-inline">
         <label for="clear-demo">Who Died:</label>
-        <input type="text" name="clear" id="whoDeaded" value="" data-clear-btn="true">
+        <input type="text" name="clear" id="whoDied" value="" data-clear-btn="true">
     </div>
     <div id="page2go" role="main" class="ui-content">
-        <a class="ui-btn ui-corner-all ui-btn-inline" onclick="">Submit Your Kill</a>
+        <a class="ui-btn ui-corner-all ui-btn-inline" onclick="submitKill()">Submit Your Kill</a>
     </div>
 
     <div role="main" class="ui-content">
