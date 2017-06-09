@@ -2,6 +2,23 @@
 userNames = [];
 passWords = [];
 
+function Player(name, id, captain, kills, status, password) {
+    this.playerName = name;
+    this.id = id;
+    this.captain = captain;
+    this.kills = kills;
+    this.status = status;
+    this.password = password
+}
+
+function Team(name, players, pin, captain, status) {
+    this.teamName = name;
+    this.players = players;
+    this.pin = pin;
+    this.captain = captain;
+    this.alive = status;
+}
+
 function saveLogin () {
 
     var inputName= $("#clear-demo").val();
@@ -16,16 +33,20 @@ function saveLogin () {
             passWords.push(inputPass);
             setData(userNames, inputName);
             setData(passWords, inputPass);
-            console.log(getData(inputName));
-            console.log(getData(inputPass));
 
+            new Player(inputName, 014, true, 0, true, inputPass);
+
+            event.preventDefault()
         } else if (!yesNo) {
             alert('Please enter your username and password correctly.')
+            event.preventDefault()
         }
     } else if (inputPass != getData(inputPass)) {
             alert('Your Password is incorrect!')
+        event.preventDefault()
     } else if (inputName != getData(inputName)) {
             alert('Your Username is incorrect')
+        event.preventDefault()
     } else if (inputPass == getData(inputPass) && inputName == getData(inputName)) {
             console.log("HI");
         console.log(getData(inputName));

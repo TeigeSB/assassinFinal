@@ -4,9 +4,9 @@ teamPin = [];
 
 
 function teamCreator () {
-    var inputName = $("#clear-demo").val();
-    var inputPin = $("#password1").val();
-    if (inputPin != getData(teamPin) && inputName != getData(teamName)) {
+    var inputName = $("#teamNam").val();
+    var inputPin = $("#teamPi").val();
+    if (inputPin != getData(inputPin) && inputName != getData(inputName)) {
         var answer = confirm('Team Name and Team Pin are incorrect, would you like to create an account?');
         if (answer == true) {
             teamName.push(inputName);
