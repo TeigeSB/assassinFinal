@@ -1,19 +1,19 @@
 function kill(player,playerDead) {
-    console.log("kill: " + player + " " + playerDead);
-    for(var i = 0; i < players.length; i++) {
-        if(players[i].playerName === player) {
+    var playerObject = findObject(player);
+    var deadPlayerObject = findObject(playerDead);
 
-            players[i].kills += 1;
-            var team = players[i].team;
-        }
-        if(players[i].playerName === playerDead) {
-            players[i].status = false;
-            var killedTeam = players[i].team;
 
-            console.log(players[i].playerName + " is dead");
+    if(playerObject.team.target === deadPlayerObject.team.teamName) {
+        deadPlayerObject.status = false;
+        var killedTeam = deadPlayerObject.team;
+        var team = playerObject.team;
 
-            killTeam(team, killedTeam);
-        }
+        console.log(deadPlayerObject.playerName + " is dead");
+
+        killTeam(team, killedTeam);
+    }
+    else{
+        console.log("you cannot kill that player");
     }
 }
 
@@ -25,15 +25,18 @@ function killTeam (team, killedTeam) {
         console.log(killedTeam.teamName + " is dead");
 
 
-        reassignTeam(team,killedTeam)
+        reassignTeam(team,killedTeam);
+    }
+    else{
+        console.log("you still have not killed all of " + killedTeam.teamName + ", that is still your target.");
     }
 }
-
 
 function reassignTeam(team,killedTeam){
     var newTeamTarget = killedTeam.target;
 
-    if(killedTeam.target === team) {
+    if(killedTeam.target === team.teamName) {
+        console.log("your team won the Game!");
         return "You Won the Game"
     }
     else {
@@ -41,5 +44,26 @@ function reassignTeam(team,killedTeam){
         killedTeam.target = "none";
 
         console.log(team.teamName  + "'s new target is " + team.target)
+    }
+}
+
+
+
+
+function submitKill() {
+    whoKilled = document.getElementById("whoKilled").value;
+    whoDied = document.getElementById("whoDied").value;
+
+    kill(whoKilled,whoDied);
+}
+
+
+
+
+function findObject(name) {
+    for (var i = 0; i < players.length; i++) {
+        if (name === players[i].playerName) {
+            return players[i];
+        }
     }
 }
