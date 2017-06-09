@@ -13,7 +13,7 @@ function saveLogin () {
             var yesNo = confirm('Username and Password are incorrect, would you like to create an account?');
         if (yesNo) {
             userNames.push(inputName);
-            passWords.push(inputPass)
+            passWords.push(inputPass);
             setData(userNames, inputName);
             setData(passWords, inputPass);
             console.log(getData(inputName));
@@ -27,7 +27,7 @@ function saveLogin () {
     } else if (inputName != getData(inputName)) {
             alert('Your Username is incorrect')
     } else if (inputPass == getData(inputPass) && inputName == getData(inputName)) {
-            console.log("HI")
+            console.log("HI");
         console.log(getData(inputName));
         console.log(getData(inputPass));
     } else {
