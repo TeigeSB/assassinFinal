@@ -35,7 +35,8 @@ function killTeam (team, killedTeam) {
 function reassignTeam(team,killedTeam){
     var newTeamTarget = killedTeam.target;
 
-    if(killedTeam.target === team) {
+    if(killedTeam.target === team.teamName) {
+        console.log("your team won the Game!");
         return "You Won the Game"
     }
     else {
