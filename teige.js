@@ -1,6 +1,7 @@
 
 userNames = [];
 passWords = [];
+p14 = '';
 
 function Player(name, id, captain, kills, status, password) {
     this.playerName = name;
@@ -34,7 +35,7 @@ function saveLogin () {
             setData(userNames, inputName);
             setData(passWords, inputPass);
 
-            new Player(inputName, 014, true, 0, true, inputPass);
+            p14 = new Player(inputName, 014, true, 0, false, inputPass);
 
             event.preventDefault()
         } else if (!yesNo) {

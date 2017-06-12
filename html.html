@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-<div data-role="page" id="page1" onclick="startGame()">
+<div data-role="page" id="page1" >
     <div data-role="header">
         <h1>Login</h1>
     </div>
@@ -35,7 +35,7 @@
 
 
     <div id="page2go" role="main" class="ui-content">
-        <a href="#page2" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline" onclick="saveLogin()">Login</a>
+        <a href="#page2" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline" onclick="saveLogin(); startGame()">Login</a>
     </div>
 </div>
 <div data-role="page" id="page2">
@@ -77,19 +77,20 @@
                 <label for="password1">Team Pin:</label>
                 <input type="text" name="clear" id="teamPi" value="" data-clear-btn="true">
             </div>
-            <div role="textbox" id="captainChoice" class="ui-btn ui-corner-all ui-btn-inline">
-                <label for="password1">Captain Choice:</label>
-                <input type="text" name="clear" id="captainChoi" value="" data-clear-btn="true">
-            </div>
             <div role="main" class="ui-content">
-                <a class="ui-btn ui-corner-all ui-btn-inline" onclick="teamCreator()">TEST</a>
+                <a class="ui-btn ui-corner-all ui-btn-inline" onclick="teamCreator()">Team</a>
+            </div>
+            <div>
+                <ol date-role="'listview">
+                    <li>HI THERE</li>
+                </ol>
             </div>
         </div>
     </div>
-
     <div role="main" class="ui-content">
         <a href="#page1" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Main</a>
     </div>
+
 </div>
 
 
