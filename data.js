@@ -1,3 +1,5 @@
+
+
 function Game(name) {
     this.gameName = name;
 }
@@ -53,7 +55,7 @@ function startGame() {
     p11 = new Player("player12", 011, false, 0, true);
     p12 = new Player("player13", 012, true, 0, true);
     p13 = new Player("player14", 013, false, 0, true);
-
+    p14 = new Player(inputName, 014, true, 0, false, inputPass);
 
     players = [p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14];
 
@@ -62,7 +64,7 @@ function startGame() {
     t1 = new Team("team2", players.slice(3,5), 001, p3, true);
     t2 = new Team("team3", players.slice(6,8), 002, p6, true);
     t3 = new Team("team4", players.slice(9,11), 003, p9, true);
-    t4 = new Team("team5", players.slice(12,14), 004, p12, true);
+    t4 = new Team("team5", players.slice(12,15), 004, p12, true);
 
 
     t0.target = t1.teamName;
@@ -92,5 +94,5 @@ function startGame() {
     teams = [t0, t1, t2, t3, t4];
 
     assassin.teams = teams;
-    assassin.players = players;
+    assassin.players1 = players;
 }

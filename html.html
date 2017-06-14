@@ -80,10 +80,10 @@
             <div role="main" class="ui-content">
                 <a class="ui-btn ui-corner-all ui-btn-inline" onclick="teamCreator()">login</a>
             </div>
-            <div id="displayTeam">
-                <p id="para1"> </p>
-                <p id="para2"> </p>
-            </div>
+            <ul id="displayTeam" data-role="listview">
+                <li id="para1"> </li>
+                <li id="para2"> </li>
+            </ul>
         </div>
     </div>
     <div role="main" class="ui-content">
@@ -109,7 +109,14 @@
     <div id="page2go" role="main" class="ui-content">
         <a class="ui-btn ui-corner-all ui-btn-inline" onclick="submitKill()">Submit Your Kill</a>
     </div>
-
+    <ul data-role="listview">
+        <li id="killedStuff"></li>
+        <li id="killedStuff1"></li>
+        <li id="killedStuff2"></li>
+        <li id="killedStuff3"></li>
+        <li id="killFail"></li>
+        <li id="youWon"></li>
+    </ul>
     <div role="main" class="ui-content">
         <a href="#page1" data-rel="back" data-transition="pop" class="ui-btn ui-corner-all ui-btn-inline">Go Back Main</a>
     </div>

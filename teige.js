@@ -1,7 +1,6 @@
 
 userNames = [];
 passWords = [];
-p14 = '';
 
 function Player(name, id, captain, kills, status, password) {
     this.playerName = name;
@@ -22,8 +21,8 @@ function Team(name, players, pin, captain, status) {
 
 function saveLogin () {
 
-    var inputName= $("#clear-demo").val();
-    var inputPass = $("#password1").val();
+    inputName = $("#clear-demo").val();
+    inputPass = $("#password1").val();
 
     console.log();
 
@@ -35,7 +34,7 @@ function saveLogin () {
             setData(userNames, inputName);
             setData(passWords, inputPass);
 
-            p14 = new Player(inputName, 014, true, 0, false, inputPass);
+
 
             event.preventDefault()
         } else if (!yesNo) {

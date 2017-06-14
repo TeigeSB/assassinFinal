@@ -2,6 +2,12 @@ function kill(player,playerDead) {
     var playerObject = findObject(player);
     var deadPlayerObject = findObject(playerDead);
 
+    document.getElementById("killedStuff2").innerHTML = '';
+    document.getElementById("killedStuff").innerHTML ='';
+    document.getElementById("killedStuff3").innerHTML = '';
+    document.getElementById("killedStuff1").innerHTML = '';
+    document.getElementById("killFail").innerHTML = '';
+    document.getElementById("youWon").innerHTML = '';
 
     if(playerObject.team.target === deadPlayerObject.team.teamName) {
         deadPlayerObject.status = false;
@@ -10,10 +16,12 @@ function kill(player,playerDead) {
 
         console.log(deadPlayerObject.playerName + " is dead");
 
+            document.getElementById("killedStuff").innerHTML = deadPlayerObject.playerName + " is dead";
         killTeam(team, killedTeam);
     }
     else{
-        console.log("you cannot kill that player");
+
+            document.getElementById("killFail").innerHTML = (" you cannot kill that player");
     }
 }
 
@@ -22,13 +30,14 @@ function killTeam (team, killedTeam) {
     if (killedTeam.captain.status == false) {
         killedTeam.status = false;
 
-        console.log(killedTeam.teamName + " is dead");
+        document.getElementById("killedStuff1").innerHTML = (killedTeam.teamName + " is dead");
 
 
         reassignTeam(team,killedTeam);
     }
     else{
-        console.log("you still have not killed all of " + killedTeam.teamName + ", that is still your target.");
+
+            document.getElementById("killedStuff2").innerHTML = (" you still have not killed all of " + killedTeam.teamName + ", that is still your target.");
     }
 }
 
@@ -36,14 +45,14 @@ function reassignTeam(team,killedTeam){
     var newTeamTarget = killedTeam.target;
 
     if(killedTeam.target === team.teamName) {
-        console.log("your team won the Game!");
+        document.getElementById("youWon").innerHTML = ("your team won the Game!");
         return "You Won the Game"
     }
     else {
         team.target = newTeamTarget;
         killedTeam.target = "none";
 
-        console.log(team.teamName  + "'s new target is " + team.target)
+        document.getElementById("killedStuff3").innerHTML = (team.teamName  + "'s new target is " + team.target)
     }
 }
 
