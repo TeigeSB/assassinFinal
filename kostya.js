@@ -1,7 +1,7 @@
-
 teamName = [];
 teamPin = [];
-
+teamName.push(t4.name);
+teamPin.push(t4.pin);
 
 function teamCreator () {
     var inputName = $("#teamNam").val();
@@ -21,6 +21,7 @@ function teamCreator () {
     }
     else if (inputPin == getData(inputPin) && inputName == getData(inputName)) {
         console.log("HI")
+        teamText();
     }
     else {
         console.log("NOT WORKING")
@@ -29,3 +30,17 @@ function teamCreator () {
     console.log(teamPin);
 }
 
+function dictionary (input) {
+    if (input == true) {
+        return "alive"
+    }
+    if (input == false) {
+        return "dead"
+    }
+}
+
+function teamText() {
+    console.log(t4.name);
+    document.getElementById("para1").innerHTML = t4.teamName;
+    document.getElementById("para2").innerHTML = dictionary(t4.alive);
+}
