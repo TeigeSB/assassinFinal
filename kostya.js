@@ -14,6 +14,7 @@ function teamCreator () {
             setData(teamName, inputName);
             setData(teamPin, inputPin);
             console.log("new account")
+            var team = new Team(inputName,)
         }
     }
     else if (inputPin != getData(inputPin)) {
